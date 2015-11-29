@@ -75,6 +75,7 @@ module.exports = traceModule = (startModuleName, config, allModules = [], fileLo
 
     if /!|^exports$|^require$|^module$|^empty:/.test(moduleName)
       return
+    else if (config.exclude && config.exclude.some((e) -> return moduleName.indexOf(e) == 0))
     else
       return moduleName
 

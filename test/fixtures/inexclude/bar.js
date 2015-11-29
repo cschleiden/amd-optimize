@@ -1,1 +1,1 @@
-define(["baz"], function (baz) {});
+define(["bar/baz"], function (baz) {});
